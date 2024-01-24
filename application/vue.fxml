@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="823.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controleur">
+  <tabs>
+    <Tab text="Paramètres">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="556.0" fitWidth="857.0" layoutX="-10.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../OneDrive/Bureau/gris.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="34.0" layoutY="39.0" text="min :" />
+                  <Label layoutX="635.0" layoutY="39.0" text="max :" />
+                  <ImageView fitHeight="372.0" fitWidth="467.0" layoutX="175.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../OneDrive/Bureau/emoji.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="boutonDemarrerJeu" layoutX="287.0" layoutY="391.0" mnemonicParsing="false" onAction="#handleDemarrerJeu" prefHeight="66.0" prefWidth="240.0" text="Jouer" />
+                  <ImageView fitHeight="122.0" fitWidth="127.0" layoutX="97.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../OneDrive/Bureau/fleche%20rouge.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="101.0" fitWidth="132.0" layoutX="576.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../OneDrive/Bureau/fleche%20rouge2.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="champBorneMin" layoutX="82.0" layoutY="34.0" prefHeight="31.0" prefWidth="64.0" />
+                  <TextField fx:id="champBorneMax" layoutX="693.0" layoutY="34.0" prefHeight="31.0" prefWidth="64.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab disable="true" text="Jeu">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="583.0" fitWidth="847.0" layoutX="-11.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../OneDrive/Bureau/gris.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="320.0" layoutY="138.0" mnemonicParsing="false" onAction="#handleSoumettre" prefHeight="40.0" prefWidth="184.0" text="Soumettre" />
+                  <Label graphicTextGap="5.0" layoutX="190.0" layoutY="79.0" text="Entrez un nombre :" textOverrun="CENTER_WORD_ELLIPSIS" />
+                  <TextField fx:id="champProposition" layoutX="342.0" layoutY="74.0" />
+                  <CheckBox fx:id="checkBoxAide" layoutX="26.0" layoutY="37.0" mnemonicParsing="false" text="activer aide" />
+                  <Label layoutX="58.0" layoutY="312.0" text="Liste des propositions :" />
+                  <Label layoutX="58.0" layoutY="253.0" text="Intervalle de recherche courant :" />
+                  <Label fx:id="Resultat" layoutX="645.0" layoutY="79.0" text="Resultat :" />
+                  <Label layoutX="78.0" layoutY="280.0" prefHeight="20.0" prefWidth="49.0" text="Min :" />
+                  <Label layoutX="356.0" layoutY="280.0" prefHeight="21.0" prefWidth="56.0" text="Max :" />
+                  <Label fx:id="Min" layoutX="155.0" layoutY="280.0" text="1" />
+                  <Label fx:id="Max" layoutX="436.0" layoutY="280.0" text="100" />
+                  <Label fx:id="Proposition" layoutX="113.0" layoutY="357.0" prefWidth="469.0" />
+                  <Button layoutX="622.0" layoutY="423.0" mnemonicParsing="false" onAction="#Abandonner" prefHeight="72.0" prefWidth="159.0" text="Abandonner" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab disable="true" text="Bilan">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="566.0" fitWidth="1079.0" layoutX="-13.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../OneDrive/Bureau/gris.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="35.0" layoutY="40.0" text="Nombre d'essais :" />
+                  <Label layoutX="35.0" layoutY="134.0" text="Historique des nombres :" />
+                  <Button fx:id="Rejouer" layoutX="327.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleRejouer" prefHeight="71.0" prefWidth="169.0" text="Rejouer" />
+                  <Label fx:id="Essais" layoutX="166.0" layoutY="37.0" prefHeight="27.0" prefWidth="75.0" />
+                  <Label layoutX="166.0" layoutY="83.0" prefHeight="27.0" prefWidth="75.0" />
+                  <Label fx:id="Historique" layoutX="218.0" layoutY="89.0" prefHeight="132.0" prefWidth="512.0" />
+                  <Label fx:id="Perdu" layoutX="586.0" layoutY="40.0" prefHeight="28.0" prefWidth="191.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
